@@ -31,7 +31,6 @@ Use
 ```php
 
   require './vendor/autoload.php';
-  require './vendor/killworm737/add-tracy-panel/src/AddPanel.php';
   
   \Tracy\Debugger::$showLocation = true; 
   \Tracy\Debugger::$editor = 'subl://open?url=file://%file&line=%line'; 
