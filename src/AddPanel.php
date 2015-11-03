@@ -4,7 +4,7 @@
  * This file is part of the Tracy (https://tracy.nette.org)
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
-namespace Killworm737;
+
 /**
  * IBarPanel implementation helper.
  * @internal
