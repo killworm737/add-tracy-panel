@@ -9,7 +9,7 @@ namespace Killworm737;
  * IBarPanel implementation helper.
  * @internal
  */
-class add-tracy-panel implements Tracy\IBarPanel
+class AddPanel implements Tracy\IBarPanel
 {
   public function __construct()
   {
