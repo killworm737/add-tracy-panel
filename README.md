@@ -29,6 +29,16 @@ Use
 -----------
 
 ```php
-$bar = Tracy\Debugger::getBar();
-$bar->addPanel(new add-tracy-panel());
+
+  require './vendor/autoload.php';
+  require './vendor/killworm737/add-tracy-panel/src/AddPanel.php';
+  
+  \Tracy\Debugger::$showLocation = true; 
+  \Tracy\Debugger::$editor = 'subl://open?url=file://%file&line=%line'; 
+  $environment = \Tracy\Debugger::DEVELOPMENT;
+  
+  $bar = \Tracy\Debugger::getBar();
+  $bar->addPanel(new AddPanel());  
+  
+  \Tracy\Debugger::enable($environment);
 ```
