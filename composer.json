@@ -1,0 +1,23 @@
+{
+        "name": "killworm737/AddTracyPanel",
+        "type": "library",
+        "description": "A panel for Tracy Debugger",
+        "keywords": ["killworm737", "tracy"],
+        "homepage": "https://github.com/killworm737/AddTracyPanel",
+        "license": ["MIT"],
+        "authors": [
+                {
+                        "name": "Kim Chen",
+                        "homepage": "https://github.com/killworm737"
+                }
+        ],
+        "require": {
+                "php": ">=5.4.0",
+                "tracy/tracy": ">=2.3"
+        },
+        "require-dev": {
+        },
+        "autoload": {
+                "classmap": ["src"]
+        }
+}
