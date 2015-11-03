@@ -22,7 +22,7 @@ class add-tracy-panel implements Tracy\IBarPanel
   public function getTab()
   {
     ob_start();
-    require __DIR__ . "/assets/Bar/bbbb.tab.phtml";
+    require __DIR__ . "/assets/Bar/test.tab.phtml";
     return ob_get_clean();
   }
 
@@ -33,7 +33,7 @@ class add-tracy-panel implements Tracy\IBarPanel
   public function getPanel()
   {
     ob_start();
-    require __DIR__ . "/assets/Bar/bbbb.panel.phtml";
+    require __DIR__ . "/assets/Bar/test.panel.phtml";
     return ob_get_clean();
   }
 
