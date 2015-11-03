@@ -1,9 +1,9 @@
 {
-        "name": "killworm737/AddTracyPanel",
+        "name": "killworm737/add-tracy-panel",
         "type": "library",
         "description": "A panel for Tracy Debugger",
         "keywords": ["killworm737", "tracy"],
-        "homepage": "https://github.com/killworm737/AddTracyPanel",
+        "homepage": "https://github.com/killworm737/add-tracy-panel",
         "license": ["MIT"],
         "authors": [
                 {
