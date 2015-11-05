@@ -1,5 +1,18 @@
-<h1>Title</h1>
-
+<h1>function 執行</h1>
 <div class="nette-inner">
- kimtest
+  <a href="debuglist.php?action=del" target="test">刪除檔案</a>
+  <?php
+  $d = dir($_SERVER['DOCUMENT_ROOT'] . "/cache/");
+  while($entry=$d->read()) {
+    $file = pathinfo($entry); 
+    if ($file['filename']!="" and $file['extension']==$_SESSION['UserID']) {
+      echo '<div style="word-break:break-all;">'; 
+      echo "<table width=100%><tr><td>"; 
+      echo '<a href="debuglist.php?ccc='.$file['filename'].'" target="test">' . $file['basename'] . '</a>';
+      echo "</td></tr></table>";
+      echo "</div>";
+    }
+  }
+  $d->close();
+  ?>
 </div>
