@@ -2,17 +2,22 @@
 <div class="nette-inner">
   <a href="debuglist.php?action=del" target="test">刪除檔案</a>
   <?php
-  $d = dir($_SERVER['DOCUMENT_ROOT'] . "/cache/");
-  while($entry=$d->read()) {
-    $file = pathinfo($entry); 
-    if ($file['filename']!="" and $file['extension']==$_SESSION['UserID']) {
-      echo '<div style="word-break:break-all;">'; 
-      echo "<table width=100%><tr><td>"; 
-      echo '<a href="debuglist.php?ccc='.$file['filename'].'" target="test">' . $file['basename'] . '</a>';
-      echo "</td></tr></table>";
-      echo "</div>";
+  
+    $handle = @fopen($_SERVER['DOCUMENT_ROOT'] . "/cache/output." . $_SESSION['UserID'] , "r");
+    if ($handle) {
+        while (($buffer = fgets($handle, 4096)) !== false) {
+          if (is_file($_SERVER['DOCUMENT_ROOT'] . "/cache/" . trim($buffer). "." . $_SESSION['UserID'])) {
+            echo '<pre><a href="debuglist.php?ccc='.trim($buffer).'" target="test">' . $buffer . '</a></pre>';
+          } else {
+            echo "<pre>" . $buffer . "</pre>";
+          }
+
+        }
+        if (!feof($handle)) {
+            // echo "Error: unexpected fgets() fail\n";
+        }
+        fclose($handle);
     }
-  }
-  $d->close();
+
   ?>
 </div>
