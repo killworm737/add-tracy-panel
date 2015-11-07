@@ -11,8 +11,10 @@
  */
 class AddPanel implements Tracy\IBarPanel
 {
-  public function __construct()
+  public $id;
+  public function __construct($id)
   {
+    $this->id = $id;
   }
 
   /**
@@ -22,7 +24,7 @@ class AddPanel implements Tracy\IBarPanel
   public function getTab()
   {
     ob_start();
-    require __DIR__ . "/assets/Bar/test.tab.phtml";
+    require __DIR__ . "/assets/Bar/{$this->id}.tab.phtml";
     return ob_get_clean();
   }
 
@@ -33,7 +35,7 @@ class AddPanel implements Tracy\IBarPanel
   public function getPanel()
   {
     ob_start();
-    require __DIR__ . "/assets/Bar/test.panel.phtml";
+    require __DIR__ . "/assets/Bar/{$this->id}.panel.phtml";
     return ob_get_clean();
   }
 
