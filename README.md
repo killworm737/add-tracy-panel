@@ -30,5 +30,6 @@ Use
 
 ```php
 $bar = Tracy\Debugger::getBar();
-$bar->addPanel(new AddPanel());
+$bar->addPanel(new AddPanel("test"));
+$bar->addPanel(new AddPanel("globals"));
 ```
