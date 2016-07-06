@@ -3,12 +3,33 @@
 <?php
 echo "<h1>公共變數</h1>";
 echo "<h2>_SESSION</h2>";
+echo '<div style="width:770px; word-break:break-all;">';
+echo "<table><tr><td>";
 dump($_SESSION);
+echo "</td></tr></table>";
+echo "</div>";
+
+
+
 echo "<h2>_REQUEST</h2>";
+echo '<div style="width:770px; word-break:break-all;">';
+echo "<table><tr><td>";
 dump($_REQUEST);
+echo "</td></tr></table>";
+echo "</div>";
+
 echo "<h2>_SERVER</h2>";
+echo '<div style="width:770px; word-break:break-all;">';
+echo "<table><tr><td>";
 dump($_SERVER);
+echo "</td></tr></table>";
+echo "</div>";
+
 echo "<h2>GLOBALS</h2>";
+echo '<div style="width:770px; word-break:break-all;">';
+echo "<table><tr><td>";
 dump($GLOBALS);
+echo "</td></tr></table>";
+echo "</div>";
 ?>
 </div>
